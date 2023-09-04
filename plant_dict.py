@@ -26,5 +26,6 @@ def plant_id(house_plant_inventory):
     print(house_plant_inventory)
 plant_id(plant_list)
 # adds a plant to the list but need to figure out how to save this addition
+# need to add lines to rows not columns
 
 
