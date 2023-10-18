@@ -24,19 +24,19 @@ def plant_id(house_plant_inventory):
     plant_name = input('What is the name of your new plant? ')
     print(f'A {plant_name}! good choice')
     water_sched = input('How frequently (days) does your mew plant require water? ')
-    print((f'okay I will remind you every {water_sched} days to water your {plant_name}'))
-    house_plant_inventory[plant_name] = water_sched
+    print((f'Okay I will remind you every {water_sched} days to water your {plant_name}'))
     print(f'I have added your {plant_name} to your list of house plants, here is your full plant list!')
-    house_plant_dict[plant_name, water_sched]
-    file = open("house_plant_inventory.csv", 'a', newline='')
-    writer = csv.writer(file)
-    writer.writerows(house_plant_dict)
-    file.close()
+    new_plant = {
+        'plant_name': {plant_name},
+        'water_frequency': {water_sched}
+    }
+    df = pd.DataFrame(new_plant)
+    # append data frame to CSV file
+    df.to_csv('house_plant_inventory.csv', mode='a', index=False, header=False)
     print(house_plant_inventory)
 
-
-
 plant_id(plant_list)
+
 
 
 
