@@ -30,10 +30,10 @@ def plant_id(house_plant_inventory):
         'plant_name': {plant_name},
         'water_frequency': {water_sched}
     }
-    df = pd.DataFrame(new_plant)
+    #df = pd.DataFrame(new_plant)
     # append data frame to CSV file
-    df.to_csv('house_plant_inventory.csv', mode='a', index=False, header=False)
-    print(house_plant_inventory)
+    #df.to_csv('house_plant_inventory.csv', mode='a', index=False, header=False)
+    #print(house_plant_inventory)
 
 plant_id(plant_list)
 
